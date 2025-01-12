@@ -1,4 +1,4 @@
-Assignment 2 Criteria - Samuel Eaves - 19137858
+Assignment 2 Criteria - Samuel Eaves
 
 NOTE: Program runs without any changes to BikeShopInput.
 
