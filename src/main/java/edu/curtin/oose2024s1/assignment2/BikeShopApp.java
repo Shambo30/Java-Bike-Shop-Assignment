@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 import java.util.logging.Level;
 
 /**
- * Assignment 2 completed by Samuel Eaves 19137858
+ * Assignment 2 completed by Samuel Eaves
  * Main entry point of program.
  */
 public class BikeShopApp
