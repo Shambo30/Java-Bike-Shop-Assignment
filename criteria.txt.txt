@@ -1,0 +1,25 @@
+Assignment 2 Criteria - Samuel Eaves - 19137858
+
+NOTE: Program runs without any changes to BikeShopInput.
+
+(a)General Code Quality:
+I tried to keep my code as clear and clean as possible making readability easier for myself and whoever has to read it. I included comments that were concise and to the point in each file. No PMD issues after a bit of fixing around so overall happy with what I've done.
+
+(b)Clear/Distinct Packages/Class/Interface/Method responsibilities
+This time around I've broken down a lot more of the overall program into a variety of separate files. I followed MVC to an extent but then moved files into folders that represented specific roles. For instance inside controller I have MessageHandler which contains an interface and each class that implements it. I tried to things together in appropriate places based off of how I implemented this assignment. Each pattern has mostly been grouped in a package that are related. In terms of classes/interfaces/method responsibilities I've broken it down to an extent I'm happy with giving distinct uses for each class/interface/method.
+
+(c)Appropriate error handling and logging
+Given my feedback from assignment 1 I didn't do this good enough missing custom exception use and handling errors that were no go's. This time around I've added a couple custom exceptions I believe were appropriate to add into my implementation and then adjusted the overall working to use them. For logging I've added various logging points in the main classes documenting useful information points.
+
+(d) Implementation of a factory and dependency injection
+Now this took me a little to workout for some reason but I then had a good idea of using a MessageHandler interface which handled specific message responses. From there I'd use a factory to create message handlers based on the type of message that needed handling. The dependency injector simply creates and connects BikeShopService, MessageHandlerFactory and MessageSubject together.
+
+(e)Appropriate use of Observer pattern
+Now I think I used this well but it stumped me for a bit on how to implement. The BikeShopService class acts as the subject while BikeShopObserver acts as the observer and is attached to the instance of BikeShopService. What the observer then does is just monitor the Bike Shop in use and tally the messages and failures in the shop use. It also  writes all messages to sim_results.txt during the programs use. It works well in my program as it helps meet the specs required monitoring the entire runtime of the Bike Shop and seeing what happens as it progresses.
+
+(f)Appropriate use of the State pattern
+Originally I had a weird idea of trying to implement state to the shop but stopped as it was much easier to do for a Bike class instead. Here I implemented states for a Bike class I created updating each Bikes state depending on what happens during the programs runtime. Bikes initially are available and then change depending on message type. I've implemented a updateState function which essentially handles the servicing where it takes two simulated days to then become available. The drawback however is that I've then got 3 other state classes that have this override for updateState that essentially do nothing. Regardless of this fault though I'm happy with it as it works good.
+
+(g)Clear and correct UML diagram and state diagram
+Now after my first attempt I was happy with what I did but heard someone mention using PlantUML to create it instead. I've then used PlantUML text to create my UML diagram this time and honestly am really happy with how it displays all my information rather than me free-handing boxes etc. For the state diagram I believe it's correct but it looks really simple and I feel like I've missed something but regardless am happy.
+
